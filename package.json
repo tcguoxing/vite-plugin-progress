@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-progress",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A progress bar plugin for Vite.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,6 +20,7 @@
   "scripts": {
     "dev": "pnpm run build -- --watch --ignore-watch examples",
     "build": "tsup src/index.ts --dts --format cjs,esm",
+    "jsbuild": "vite build src/index.js",
     "prepublishOnly": "pnpm run build",
     "release": "npx bumpp --push --tag --commit && pnpm publish",
     "example:react": "cd examples/vite-react && pnpm run build",
